@@ -73,7 +73,7 @@ buildVariant() {
     make -j$(nproc --all) installclean
     make -j$(nproc --all) systemimage
     make -j$(nproc --all) target-files-package otatools
-    bash $BL/sign.sh "vendor/daniel-priv/keys" $OUT/signed-target_files.zip
+    bash $BL/sign.sh "vendor_daniel-priv/keys" $OUT/signed-target_files.zip
     unzip -jqo $OUT/signed-target_files.zip IMAGES/system.img -d $OUT
     mv $OUT/system.img $BD/system-"$1".img
     echo

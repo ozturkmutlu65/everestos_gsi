@@ -10,11 +10,11 @@ echo
 
 set -e
 
-BL=$PWD/treble_aosp
+BL=$PWD/Redmi_13C_treble_aosp
 BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
-GUSER="ponces"
-GREPO="treble_aosp"
+GUSER="Imbroglius"
+GREPO="Redmi_13C_treble_aosp"
 
 SKIPOTA=false
 if [ "$1" == "--skip-ota" ]; then

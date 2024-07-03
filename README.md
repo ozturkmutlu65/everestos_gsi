@@ -12,7 +12,7 @@ To get started with building AOSP GSI, you'll need to get familiar with [Git and
     ```
 - Finally, start the build script:
     ```
-    bash treble_aosp/build.sh
+    bash Redmi_13C_treble_aosp/build.sh
     ```
 
 

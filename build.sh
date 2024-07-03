@@ -5,6 +5,8 @@ echo "--------------------------------------"
 echo "          AOSP 14.0 Buildbot          "
 echo "                  by                  "
 echo "                ponces                "
+echo "          tuned for Redmi13C          "
+echo "             by Imbroglius            "
 echo "--------------------------------------"
 echo
 

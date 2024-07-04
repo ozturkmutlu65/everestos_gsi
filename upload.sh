@@ -23,6 +23,9 @@ if [ "$1" == "--skip-ota" ]; then
     SKIPOTA=true
 fi
 
+curl -o /dev/null -sH "$AUTH" $GREPO || { echo "Error: Invalid repo, token or network issue!";  exit 1; }
+
+
 createRelease() {
     echo "--> Creating release $TAG"
     res=$(curl -s -L -X POST \

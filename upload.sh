@@ -23,7 +23,7 @@ if [ "$1" == "--skip-ota" ]; then
     SKIPOTA=true
 fi
 
-curl -o /dev/null -sH "$AUTH" $GREPO || { echo "Error: Invalid repo, token or network issue!";  exit 1; }
+curl -o /dev/null -sH "token $GITHUB_TOKEN"" $GREPO || { echo "Error: Invalid repo, token or network issue!";  exit 1; }
 
 
 createRelease() {
@@ -31,7 +31,7 @@ createRelease() {
     res=$(curl -s -L -X POST \
         "https://api.github.com/repos/$GUSER/$GREPO/releases" \
         -H "Accept: application/vnd.github+json" \
-        -H "Authorization: AUTH" \
+        -H "Authorization: token $GITHUB_TOKEN" \
         -d "{\"tag_name\":\"$TAG\",\"name\":\"AOSP 14.0 $TAG\",\"body\":\"## Changelog\n- ...\n\n## Notes\n- ...\",\"draft\":true}")
     id=$(echo "$res" | jq -rc ".id")
     echo
@@ -44,7 +44,7 @@ uploadAssets() {
         curl -o /dev/null -s -L -X POST \
             "https://uploads.github.com/repos/$GUSER/$GREPO/releases/$id/assets?name=$(basename $file)" \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: AUTH" \
+            -H "Authorization: token $GITHUB_TOKEN" \
             -H "Content-Type: application/octet-stream" \
             -T "$file"
         echo

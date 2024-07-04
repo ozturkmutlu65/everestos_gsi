@@ -35,7 +35,7 @@ jobs:
       - name: Get Keys
         uses: actions/checkout@v4
         with:
-          repository: Imbrogliu/vendor_daniel-priv
+          repository: Imbroglius/vendor_daniel-priv
           token: ${{ secrets.GH_TOKEN }}
           path: vendor_daniel-priv
 

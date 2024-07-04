@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Imbroglius/vendor_daniel-priv
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.MY_TOKEN || github.token }}
           path: vendor_daniel-priv
 
       - name: Build ROM

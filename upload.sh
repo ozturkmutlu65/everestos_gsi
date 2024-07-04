@@ -15,6 +15,7 @@ BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
 GUSER="Imbroglius"
 GREPO="Redmi_13C_treble_aosp"
+AUTH="Authorization: token $github_api_token"
 
 
 SKIPOTA=false
@@ -27,7 +28,7 @@ createRelease() {
     res=$(curl -s -L -X POST \
         "https://api.github.com/repos/$GUSER/$GREPO/releases" \
         -H "Accept: application/vnd.github+json" \
-        -H "Authorization: Bearer secrets.GITHUB_TOKEN" \
+        -H "Authorization: Bearer AUTH" \
         -d "{\"tag_name\":\"$TAG\",\"name\":\"AOSP 14.0 $TAG\",\"body\":\"## Changelog\n- ...\n\n## Notes\n- ...\",\"draft\":true}")
     id=$(echo "$res" | jq -rc ".id")
     echo
@@ -40,7 +41,7 @@ uploadAssets() {
         curl -o /dev/null -s -L -X POST \
             "https://uploads.github.com/repos/$GUSER/$GREPO/releases/$id/assets?name=$(basename $file)" \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer secrets.GITHUB_TOKEN" \
+            -H "Authorization: Bearer AUTH" \
             -H "Content-Type: application/octet-stream" \
             -T "$file"
         echo

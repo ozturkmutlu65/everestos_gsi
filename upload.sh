@@ -34,7 +34,7 @@ createRelease() {
 
 uploadAssets() {
     buildDate="$(date +%Y%m%d)"
-    find $BD/ -name "aosp-*-14.0-$buildDate.img.xz" | while read file; do
+    find $BD/ -name "Redmi13C_aosp-*-14.0-$buildDate.img.xz" | while read file; do
         echo "--> Uploading $(basename $file)"
         curl -o /dev/null -s -L -X POST \
             "https://uploads.github.com/repos/$GUSER/$GREPO/releases/$id/assets?name=$(basename $file)" \

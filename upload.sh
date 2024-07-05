@@ -15,7 +15,7 @@ BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
 GUSER="Imbroglius"
 GREPO="Redmi_13C_treble_aosp"
-FUCKINGKEY="${{ secrets.GITHUB_TOKEN }}"
+FUCKINGKEY="${{secrets.GITHUB_TOKEN}}"
 
 
 SKIPOTA=false

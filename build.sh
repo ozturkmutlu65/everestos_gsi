@@ -12,7 +12,7 @@ echo
 
 set -e
 
-BL=$PWD/Redmi_13C_treble_aosp
+BL=$PWD/redmi_13c_treble_aosp
 BD=$HOME/builds
 BV=$1
 

@@ -1,9 +1,9 @@
 FROM ubuntu:22.04
 LABEL Imbroglius="wheelcorner78@gmail.com"
 
-COPY . /aosp/treble_aosp
-RUN ln -s /aosp/treble_aosp/build.sh /usr/bin/treblebuild && \
-    ln -s /aosp/treble_aosp/sync.sh /usr/bin/treblesync
+COPY . /aosp/redmi13c_treble_aosp
+RUN ln -s /aosp/redmi13c_treble_aosp/build.sh /usr/bin/treblebuild && \
+    ln -s /aosp/redmi13c_treble_aosp/sync.sh /usr/bin/treblesync
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN dpkg --add-architecture i386 && \

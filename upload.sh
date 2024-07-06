@@ -10,7 +10,7 @@ echo
 
 set -e
 
-BL=$PWD/treble_aosp
+BL=$PWD/redmi_13c_treble_aosp
 BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
 GUSER="Imbroglius"

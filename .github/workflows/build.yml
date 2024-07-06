@@ -30,7 +30,7 @@ jobs:
         run: echo "BUILD_VARIANT=${{ inputs.build_variant || 'treble_arm64_bgN' }}" >> $GITHUB_ENV
 
       - name: Build Image
-        run: docker build -f build/Dockerfile -t imbroglius/treble .
+        run: docker build -f build/Dockerfile -t imbroglius/aosp .
 
       - name: Get Keys
         uses: actions/checkout@v4

@@ -10,7 +10,7 @@ echo
 
 set -e
 
-BL=$PWD/aosp
+BL=$PWD/treble_aosp
 BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
 GUSER="Imbroglius"

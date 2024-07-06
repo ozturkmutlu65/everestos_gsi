@@ -14,7 +14,7 @@ BL=$PWD/redmi_13c_treble_aosp
 BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
 GUSER="imbroglius"
-GREPO="Redmi_13C_treble_aosp"
+GREPO="redmi_13c_treble_aosp"
 
 
 

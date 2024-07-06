@@ -37,7 +37,7 @@ jobs:
         with:
           repository: ponces/vendor_ponces-priv
           token: ${{ secrets.GH_TOKEN }}
-          path: vendor_ponces-priv
+          path: vendor_daniel-priv
 
       - name: Build ROM
         run: |
@@ -46,7 +46,7 @@ jobs:
                      --privileged \
                      --name test \
                      --volume ${{ github.workspace }}/builds:/root/builds \
-                     --volume ${{ github.workspace }}/vendor_ponces-priv:/aosp/vendor/ponces-priv \
+                     --volume ${{ github.workspace }}/vendor_daniel-priv:/aosp/vendor/daniel-priv \
                      ponces/treble treblebuild ${{ env.BUILD_VARIANT }}
 
       - name: Upload ROM

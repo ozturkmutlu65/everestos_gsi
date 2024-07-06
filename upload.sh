@@ -13,7 +13,7 @@ set -e
 BL=$PWD/redmi_13c_treble_aosp
 BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
-GUSER="Imbroglius"
+GUSER="imbroglius"
 GREPO="Redmi_13C_treble_aosp"
 
 

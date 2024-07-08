@@ -10,7 +10,7 @@ echo
 
 set -e
 
-BL=$PWD/Redmi_13C_treble_aosp
+BL=$PWD/imbroglios_gsi
 TD="android-14.0"
 
 initRepos() {

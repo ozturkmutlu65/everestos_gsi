@@ -3,8 +3,6 @@
 echo
 echo "--------------------------------------"
 echo "          AOSP 14.0 Buildbot          "
-echo "                  by                  "
-echo "                ponces                "
 echo "              ImbrogliOS              "
 echo "             by Imbroglius            "
 echo "--------------------------------------"

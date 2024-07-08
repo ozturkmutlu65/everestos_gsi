@@ -1,4 +1,4 @@
-# TrebleDroid AOSP GSI for Redmi 13C
+# ImbrogliOS AOSP GSI
 
 ## Build
 To get started with building AOSP GSI, you'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
@@ -8,11 +8,11 @@ To get started with building AOSP GSI, you'll need to get familiar with [Git and
     ```
 - Clone this repo:
     ```
-    git clone https://github.com/imbroglius/redmi_13c_treble_aosp -b android-14.0
+    git clone https://github.com/imbroglius/imbroglios_gsi -b android-14.0
     ```
 - Finally, start the build script:
     ```
-    bash redmi_13c_treble_aosp/build.sh
+    bash imbroglios_gsi/build.sh
     ```
 
 

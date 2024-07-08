@@ -15,7 +15,7 @@ BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
 GUSER="imbroglius"
 GREPO="imbroglios_gsi"
-TOKKEN=${{ secrets.IMBROGLIOTOKEN }}
+TOKKEN= ${{ secrets.IMBROGLIOTOKEN }}
 
 
 SKIPOTA=false

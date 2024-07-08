@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 LABEL imbroglius="wheelcorner78@gmail.com"
 
-COPY . /aosp/redmi13c_treble_aosp
+COPY . /aosp/imbroglios_gsi
 RUN ln -s /aosp/imbroglios_gsi/build.sh /usr/bin/treblebuild && \
     ln -s /aosp/imbroglios_gsi/sync.sh /usr/bin/treblesync
 

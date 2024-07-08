@@ -35,8 +35,8 @@ jobs:
       - name: Get Keys
         uses: actions/checkout@v4
         with:
-          repository: ponces/vendor_ponces-priv
-          token: ${{ secrets.GH_TOKEN }}
+          repository: imbroglius/vendor_daniel-priv
+          token: $IMBROGLIOTOKEN
           path: vendor_daniel-priv
 
       - name: Build ROM

@@ -10,11 +10,11 @@ echo
 
 set -e
 
-BL=$PWD/redmi_13c_treble_aosp
+BL=$PWD/imbroglios_gsi
 BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
 GUSER="imbroglius"
-GREPO="redmi_13c_treble_aosp"
+GREPO="imbroglios_gsi"
 
 
 SKIPOTA=false

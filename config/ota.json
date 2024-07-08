@@ -1,11 +1,11 @@
 {
-  "version": "v2024.07.07",
-  "date": "1720292328",
+  "version": "v2024.07.08",
+  "date": "1720453475",
   "variants": [
     {
       "name": "treble_arm64_bgN",
-      "size": "1341279500",
-      "url": "https://github.com/imbroglius/imbroglios_gsi/releases/download/v2024.07.07/Redmi13C_aosp-arm64-ab-gapps-14.0-20240707.img.xz"
+      "size": "1341167976",
+      "url": "https://github.com/imbroglius/imbroglios_gsi/releases/download/v2024.07.08/ImbrogliOS_aosp-arm64-ab-gapps-14.0-20240708.img.xz"
     }
   ]
 }

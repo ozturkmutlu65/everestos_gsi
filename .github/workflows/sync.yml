@@ -21,8 +21,8 @@ jobs:
         run: |
           docker run --rm \
                      --name td \
-                     --volume ${{ github.workspace }}/patches:/aosp/redmi_13c_treble_aosp/patches \
-                     ponces/treble treblesync
+                     --volume ${{ github.workspace }}/patches:/aosp/imbroglios_gsi/patches \
+                     imbroglius/treble treblesync
           cp -r patches/trebledroid patches/patches
           cd patches
           zip -rq patches-for-developers.zip patches

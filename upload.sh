@@ -16,7 +16,6 @@ TAG="$(date +v%Y.%m.%d)"
 GUSER="imbroglius"
 GREPO="imbroglios_gsi"
 
-
 SKIPOTA=false
 if [ "$1" == "--skip-ota" ]; then
     SKIPOTA=true
@@ -27,7 +26,7 @@ createRelease() {
     res=$(curl -s -L -X POST \
         "https://api.github.com/repos/$GUSER/$GREPO/releases" \
         -H "Accept: application/vnd.github+json" \
-        -H "Authorization: Bearer $secret.IMBROGLIOTOKEN" \
+        -H "Authorization: Bearer $IMBROGLIOTOKEN" \
         -d "{\"tag_name\":\"$TAG\",\"name\":\"AOSP 14.0 $TAG\",\"body\":\"## Changelog\n- ...\n\n## Notes\n- ...\",\"draft\":true}")
     id=$(echo "$res" | jq -rc ".id")
     echo
@@ -40,7 +39,7 @@ uploadAssets() {
         curl -o /dev/null -s -L -X POST \
             "https://uploads.github.com/repos/$GUSER/$GREPO/releases/$id/assets?name=$(basename $file)" \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $secret.IMBROGLIOTOKEN" \
+            -H "Authorization: Bearer $IMBROGLIOTOKEN" \
             -H "Content-Type: application/octet-stream" \
             -T "$file"
         echo

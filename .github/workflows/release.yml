@@ -40,8 +40,8 @@ jobs:
                      --name treble \
                      --volume ${{ github.workspace }}/builds:/root/builds \
                      --volume ${{ github.workspace }}/vendor_daniel-priv:/aosp/vendor/daniel-priv \
-                     --volume ${{ github.workspace }}/config/ota.json:/aosp/treble_aosp/config/ota.json \
-                     ponces/treble treblebuild
+                     --volume ${{ github.workspace }}/config/ota.json:/aosp/imbroglios_gsi/config/ota.json \
+                     imbroglius/treble treblebuild
 
       - name: Upload OTA
         uses: actions/upload-artifact@v4

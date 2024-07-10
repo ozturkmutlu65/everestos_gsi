@@ -6,6 +6,10 @@ on:
     tags:
       - 'v*'
 
+default:
+  run:
+    timeout-minutes: 600
+
 concurrency: 
   group: ${{ github.workflow }}
   cancel-in-progress: true

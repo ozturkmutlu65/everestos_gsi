@@ -37,6 +37,8 @@ generateOta() {
     }
     echo
 
+}
+
     generateOta
 
 END=$(date +%s)

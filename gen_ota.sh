@@ -41,9 +41,6 @@ generateOta() {
 
     generateOta
 
-END=$(date +%s)
-ELAPSEDM=$(($(($END-$START))/60))
-ELAPSEDS=$(($(($END-$START))-$ELAPSEDM*60))
 
-echo "--> Buildbot completed in $ELAPSEDM minutes and $ELAPSEDS seconds"
+echo "--> Buildbot completed
 echo

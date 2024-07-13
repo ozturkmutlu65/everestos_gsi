@@ -13,7 +13,7 @@ concurrency:
 jobs:
   build:
     timeout-minutes: 6000
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       contents: write
     steps:

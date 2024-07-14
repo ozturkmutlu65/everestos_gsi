@@ -28,7 +28,7 @@ index 16f8ecf..5920a66 100644
                      (Ims.gotQcomHidl || Ims.gotQcomAidl) && Build.VERSION.SDK_INT >= 34
 -                        -> Pair("https://treble.phh.me/ims-caf-u$signSuffix.apk", "Qualcomm vendor")
 -                    Ims.gotQcomHidlMoto -> Pair("https://treble.phh.me/stable/ims-caf-moto$signSuffix.apk", "Qualcomm pre-S vendor (Motorola)")
--                    Ims.gotQcomHidl -> Pair("https://treble.phh.me/stable/ims-q$signSuffix.64.apk", "Qualcomm pre-S vendor")
+-                    Ims.gotQcomHidl -> Pair("https://treble.phh.me/stable/ims-q.64$signSuffix.apk", "Qualcomm pre-S vendor")
 -                    Ims.gotQcomAidl -> Pair("https://treble.phh.me/stable/ims-caf-s$signSuffix.apk", "Qualcomm S+ vendor")
 -                    else -> Pair("", "NOT SUPPORTED")
 +                        -> Pair("https://github.com/imbroglius/vendor_imbroglius/raw/android-14.0/raw/android-14.0/prebuilt/ims/ims-caf-u-imbrogliosign.apk", "Qualcomm vendor")

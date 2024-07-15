@@ -2,7 +2,7 @@
 
 ## Build
 To get started with building AOSP GSI, you'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
-- First install all needed things to build AOSP (here on Debian/Ubuntu/Mint):
+- First install all needed things to build AOSP (successfully tested on Linux Mint 21.3):
     ```
     sudo apt-get update && sudo apt-get install -y git-core gnupg flex bc bison \
 	build-essential zip curl zlib1g-dev libc6-dev-i386 libncurses5 x11proto-core-dev \

@@ -9,6 +9,14 @@ To get started with building AOSP GSI, you'll need to get familiar with [Git and
 	libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig python3 \
 	clang git nano android-sdk-platform-tools-common openjdk-17-jdk
     ```
+- Install the repo command:
+  ```
+	mkdir -p ~/.bin \
+	PATH="${HOME}/.bin:${PATH}" \
+	curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo \
+	chmod a+rx ~/.bin/repo
+	```
+
 - Create a new working directory for your AOSP build and navigate to it:
     ```
     mkdir aosp; cd aosp

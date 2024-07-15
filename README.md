@@ -7,7 +7,7 @@ To get started with building AOSP GSI, you'll need to get familiar with [Git and
     sudo apt-get update && sudo apt-get install -y git-core gnupg flex bc bison \
 	build-essential zip curl zlib1g-dev libc6-dev-i386 libncurses5 x11proto-core-dev \
 	libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig python3 \
-	clang repo git nano android-sdk-platform-tools-common openjdk-17-jdk
+	clang git nano android-sdk-platform-tools-common openjdk-17-jdk
     ```
 - Create a new working directory for your AOSP build and navigate to it:
     ```

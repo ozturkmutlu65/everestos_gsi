@@ -33,6 +33,7 @@ syncRepos() {
 }
 
 clonePriv() {
+    echo "Import signing keys if you want"
     read -p "Clone your private signing keys repo now in another terminal and after that press any key here to continue"
 }
 

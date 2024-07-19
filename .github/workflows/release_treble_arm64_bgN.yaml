@@ -43,7 +43,6 @@ jobs:
                      --volume ${{ github.workspace }}/vendor_daniel-priv:/aosp/vendor/daniel-priv \
                      --volume ${{ github.workspace }}/config/ota.json:/aosp/imbroglios_gsi/config/ota.json \
                      imbroglius/imbroglios treblebuild_arm64_bgN
-
       - name: Upload OTA
         uses: actions/upload-artifact@v4
         with:

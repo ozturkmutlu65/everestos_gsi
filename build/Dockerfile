@@ -4,7 +4,7 @@ LABEL imbroglius="wheelcorner78@gmail.com"
 COPY . /aosp/imbroglios_gsi
 RUN ln -s /aosp/imbroglios_gsi/build.sh /usr/bin/treblebuild && \
     ln -s /aosp/imbroglios_gsi/sync.sh /usr/bin/treblesync && \
-    ln -s /aosp/imbroglios_gsi/build_treble_arm64_bgN.sh /usr/bin/treblebuild_arm64_bgN
+    ln -s /aosp/imbroglios_gsi/build_treble_arm64_bgn.sh /usr/bin/treblebuild_arm64_bgN
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN dpkg --add-architecture i386 && \

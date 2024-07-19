@@ -24,7 +24,7 @@ jobs:
         run: echo "RELEASE_TITLE=$(date +'v%Y.%m.%d')" >> $GITHUB_ENV
 
       - name: Build Image
-        run: docker build -f build/Dockerfile -t imbroglius/ImbrogliOS .
+        run: docker build -f build/Dockerfile -t imbroglius/imbroglios .
 
       - name: Get Keys
         uses: actions/checkout@v4
@@ -42,7 +42,7 @@ jobs:
                      --volume ${{ github.workspace }}/builds:/root/builds \
                      --volume ${{ github.workspace }}/vendor_daniel-priv:/aosp/vendor/daniel-priv \
                      --volume ${{ github.workspace }}/config/ota.json:/aosp/imbroglios_gsi/config/ota.json \
-                     imbroglius/ImbrogliOS treblebuild_arm64_bgN
+                     imbroglius/imbroglios treblebuild_arm64_bgN
 
       - name: Upload OTA
         uses: actions/upload-artifact@v4

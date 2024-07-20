@@ -13,6 +13,7 @@ set -e
 BL=$PWD/imbroglios_gsi
 BD=$HOME/builds
 BV=treble_arm64_bgN
+LMD=.repo/local_manifests
 
 initRepos() {
     echo "--> Initializing workspace"
@@ -20,7 +21,11 @@ initRepos() {
     echo
 
     echo "--> Preparing local manifest"
-    rm -r .repo/local_manifests
+    if [ -d "$LMD" ]; then
+        echo "Deleting old local manifests"
+          rm -r $LMD
+    fi
+    echo "Fetching new local manifests"
     mkdir -p .repo/local_manifests
     cp $BL/build/default.xml .repo/local_manifests/default.xml
     cp $BL/build/remove.xml .repo/local_manifests/remove.xml

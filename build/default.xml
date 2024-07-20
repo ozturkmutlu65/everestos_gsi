@@ -19,7 +19,7 @@
 
   <!-- imbroglius -->
   <project name="imbroglius/vendor_imbroglius" path="vendor/imbroglius" remote="github" revision="android-14.0" />
-  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="gitlab" revision="upsilon" clone-depth="1" >
+  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="gitlab" revision="upsilon" clone-depth="1" />
   
   <!-- LineageOS -->
   <remove-project name="platform/packages/apps/Launcher3" />

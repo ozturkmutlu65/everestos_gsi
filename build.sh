@@ -38,8 +38,6 @@ syncRepos() {
     repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all) || repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
     echo
 }
-    echo
-}
 
 clonePriv() {
     echo "Import signing keys if you want"

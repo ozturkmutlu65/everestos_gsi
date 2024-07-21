@@ -1,2 +1,8 @@
 #!/bin/bash
-git pull origin
+set -e
+
+BL=$PWD/imbroglios_gsi
+BD=$HOME/builds
+BV=$1
+
+$BL/git pull origin

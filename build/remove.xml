@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remove-project name="platform/external/ant-glob" />
   <remove-project name="device/google/atv" />
   <remove-project name="device/google/akita" />
   <remove-project name="device/google/akita-kernel" />

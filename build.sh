@@ -14,10 +14,6 @@ BL=$PWD/imbroglios_gsi
 BD=$HOME/builds
 BV=$1
 
-updateImbrogliOsGit() {
-    echo "--> Updating ImbrogliOS Git Repository"
-    bash $BL/gitpull.sh
-}
 
 initRepos() {
     echo "--> Initializing workspace"
@@ -156,7 +152,6 @@ generateOta() {
 
 START=$(date +%s)
 
-updateImbrogliOsGit
 initRepos
 syncRepos
 clonePriv

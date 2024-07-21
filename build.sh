@@ -14,6 +14,11 @@ BL=$PWD/imbroglios_gsi
 BD=$HOME/builds
 BV=$1
 
+updateImbrogliOsGit() {
+    echo "--> Updating ImbrogliOS Git Repository"
+    $BL/git pull origin master
+}
+
 initRepos() {
     echo "--> Initializing workspace"
     repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r54 --git-lfs
@@ -151,6 +156,7 @@ generateOta() {
 
 START=$(date +%s)
 
+updateImbrogliOsGit
 initRepos
 syncRepos
 clonePriv

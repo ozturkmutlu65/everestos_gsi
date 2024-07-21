@@ -16,7 +16,7 @@ BV=$1
 
 updateImbrogliOsGit() {
     echo "--> Updating ImbrogliOS Git Repository"
-    $BL/git pull origin master
+    bash $BL/git pull origin master
 }
 
 initRepos() {

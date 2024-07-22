@@ -11,7 +11,7 @@ It is actually based on:
 - the builds are signed with my personal keys
 - all in all it's a very clean AOSP GSI
 
-## Build
+## Build yourself
 To get started with building AOSP GSI, you'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
 - First install all needed things to build AOSP (successfully tested on Linux Mint 21.3):
     ```

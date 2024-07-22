@@ -2,7 +2,10 @@
 
 ## INFO
 ImbrogliOS is mainly created for my personal purposes.
+Pre-Releases and testing builds are ONLY built with target treble_arm64_bgN!
+
 It is actually based on:
+
 - Android 14.0.0_r54
 - latest GApps from barbet 14/AP2A.240705.004
 - Synced to TD Patches

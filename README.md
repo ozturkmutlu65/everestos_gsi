@@ -7,7 +7,7 @@ It is actually based on:
 - latest GApps from barbet
 - Aperture camera App from LineageOS is included
 - for my personal purposes I also included Magisk App
-- 
+- the builds are signed with my personal keys
 
 ## Build
 To get started with building AOSP GSI, you'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).

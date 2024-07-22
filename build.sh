@@ -169,7 +169,7 @@ clonePriv
 applyPatches
 setupEnv
 buildTrebleApp
-build Lawnchair
+buildLawnchair
 [ ! -z "$BV" ] && buildVariant "$BV" || buildVariants
 generatePackages
 generateOta

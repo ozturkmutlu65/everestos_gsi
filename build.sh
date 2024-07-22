@@ -78,7 +78,7 @@ buildTrebleApp() {
 }
 
 buildLawnchair() {
-    echo "--> Building Lawnchair
+    echo "--> Building Lawnchair"
     git clone --recursive https://github.com/imbroglius/lawnchair.git
     cd lawnchair
     bash build.sh release

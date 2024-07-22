@@ -10,6 +10,7 @@ It is actually based on:
 - latest GApps from barbet 14/AP2A.240705.004
 - Synced to TD Patches
 - Aperture camera App from LineageOS is included
+- Trebuchet launcher
 - the builds are signed with my personal keys
 - all in all it's a very clean AOSP GSI
 

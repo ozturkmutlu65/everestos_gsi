@@ -4,7 +4,7 @@
 ImbrogliOS is mainly created for my personal purposes.
 It is actually based on:
 - Android 14.0.0_r54
-- latest GApps from barbet
+- latest GApps from barbet 14/AP2A.240705.004
 - Aperture camera App from LineageOS is included
 - for my personal purposes I also included Magisk App
 - the builds are signed with my personal keys

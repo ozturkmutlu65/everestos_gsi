@@ -85,7 +85,6 @@ buildLawnchair() {
         cd ..
 fi
     git clone --recursive https://github.com/imbroglius/lawnchair.git
-fi
     cd lawnchair
     bash build.sh release
     cp Lawnchair.apk ..vendor/hardware_overlay/Lawnchair/app.apk

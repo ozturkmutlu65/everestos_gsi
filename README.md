@@ -5,6 +5,9 @@ ImbrogliOS is mainly created for my personal purposes.
 It is actually based on:
 - Android 14.0.0_r54
 - latest GApps from barbet
+- Aperture camera App from LineageOS is included
+- for my personal purposes I also included Magisk App
+- 
 
 ## Build
 To get started with building AOSP GSI, you'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).

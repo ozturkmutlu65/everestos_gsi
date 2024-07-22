@@ -1,6 +1,17 @@
 # ImbrogliOS AOSP GSI
 
-## Build
+## INFO
+ImbrogliOS is mainly created for my personal purposes.
+It is actually based on:
+- Android 14.0.0_r54
+- latest GApps from barbet 14/AP2A.240705.004
+- Synced to TD Patches
+- Aperture camera App from LineageOS is included
+- for my personal purposes I also included Magisk App
+- the builds are signed with my personal keys
+- all in all it's a very clean AOSP GSI
+
+## Build yourself (it is no signed as long as you don't include your own keys)
 To get started with building AOSP GSI, you'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
 - First install all needed things to build AOSP (successfully tested on Linux Mint 21.3):
     ```

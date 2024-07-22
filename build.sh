@@ -79,7 +79,13 @@ buildTrebleApp() {
 
 buildLawnchair() {
     echo "--> Building Lawnchair"
+    if [ -d /home/daniel/aosp/lawnchair/ ];then
+        cd lawnchair
+        git pull
+        cd ..
+fi
     git clone --recursive https://github.com/imbroglius/lawnchair.git
+fi
     cd lawnchair
     bash build.sh release
     cp Lawnchair.apk ..vendor/hardware_overlay/Lawnchair/app.apk

@@ -77,6 +77,17 @@ buildTrebleApp() {
     echo
 }
 
+build Lawnchair() {
+    echo "--> Building Lawnchair
+    git clone --recursive https://github.com/imbroglius/lawnchair.git
+    cd lawnchair
+    bash build.sh release
+    cp Lawnchair.apk ..vendor/hardware_overlay/Lawnchair/app.apk
+    cd ..
+    echo
+}
+    
+
 buildVariant() {
     echo "--> Building $1"
     lunch "$1"-ap2a-userdebug
@@ -158,6 +169,7 @@ clonePriv
 applyPatches
 setupEnv
 buildTrebleApp
+build Lawnchair
 [ ! -z "$BV" ] && buildVariant "$BV" || buildVariants
 generatePackages
 generateOta

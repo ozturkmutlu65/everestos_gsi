@@ -10,11 +10,11 @@ echo
 
 set -e
 
-BL=$PWD/imbroglios_gsi
+BL=$PWD/everestos_gsi
 BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
-GUSER="imbroglius"
-GREPO="imbroglios_gsi"
+GUSER="ozturkmutlu65"
+GREPO="everestos_gsi"
 
 SKIPOTA=false
 if [ "$1" == "--skip-ota" ]; then
@@ -34,12 +34,11 @@ createRelease() {
 
 uploadAssets() {
     buildDate="$(date +%Y%m%d)"
-    find $BD/ -name "ImbrogliOS_aosp-*-14.0-$buildDate.img.xz" | while read file; do
+    find $BD/ -name "ProjectEverest*-$buildDate.img.xz" | while read file; do
         echo "--> Uploading $(basename $file)"
         curl -o /dev/null -s -L -X POST \
             "https://uploads.github.com/repos/$GUSER/$GREPO/releases/$id/assets?name=$(basename $file)" \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $IMBROGLIOTOKEN" \
             -H "Content-Type: application/octet-stream" \
             -T "$file"
         echo

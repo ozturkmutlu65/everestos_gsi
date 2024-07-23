@@ -2,22 +2,22 @@
 
 echo
 echo "--------------------------------------"
-echo "          AOSP 14.0 Buildbot          "
-echo "              ImbrogliOS              "
-echo "             by Imbroglius            "
+echo "       ProjectEverest 1.4 Buildbot    "
+echo "             ProjectEverest           "
+echo "             by mrgebesturtle         "
 echo "--------------------------------------"
 echo
 
 set -e
 
-BL=$PWD/imbroglios_gsi
+BL=$PWD/everestos_gsi
 BD=$HOME/builds
-BV=treble_arm64_bgN
+BV=treble_arm64_bvN
 LMD=.repo/local_manifests
 
 initRepos() {
     echo "--> Initializing workspace"
-    repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r54 --git-lfs
+    repo init -u https://github.com/ProjectEverest/manifest -b qpr3 --git-lfs
     echo
 
     echo "--> Preparing local manifest"
@@ -34,7 +34,7 @@ initRepos() {
 
 syncRepos() {
     echo "--> Syncing repos"
-    repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all) || repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
+    repo sync -c --force-sync --no-clone-bundle --no-tags -j16 || repo sync -c --force-sync --no-clone-bundle --no-tags -j16
     echo
 }
 
@@ -54,8 +54,8 @@ applyPatches() {
 
     echo "--> Generating makefiles"
     cd device/phh/treble
-    cp $BL/build/aosp.mk .
-    bash generate.sh aosp
+    cp $BL/build/everest.mk .
+    bash generate.sh everest
     cd ../../..
     echo
 }
@@ -78,25 +78,10 @@ buildTrebleApp() {
 
 buildVariant() {
     echo "--> Building $1"
-    lunch "$1"-ap2a-userdebug
+    lunch "$1"-userdebug
     make -j$(nproc --all) installclean
     make -j$(nproc --all) systemimage
-    make -j$(nproc --all) target-files-package otatools
-    bash $BL/sign.sh "vendor/daniel-priv/keys" $OUT/signed-target_files.zip
-    unzip -jqo $OUT/signed-target_files.zip IMAGES/system.img -d $OUT
     mv $OUT/system.img $BD/system-"$1".img
-    echo
-}
-
-buildVndkliteVariant() {
-    
-    echo "--> Building $1-vndklite"
-    [[ "$1" == *"a64"* ]] && arch="32" || arch="64"
-    cd treble_adapter
-    sudo bash lite-adapter.sh "$arch" $BD/system-"$1".img
-    mv s.img $BD/system-"$1"-vndklite.img
-    sudo rm -rf d tmp
-    cd ..
     echo
 }
 
@@ -126,29 +111,6 @@ generatePackages() {
     echo
 }
 
-generateOta() {
-    echo "--> Generating OTA file"
-    version="$(date +v%Y.%m.%d)"
-    buildDate="$(date +%Y%m%d)"
-    timestamp="$START"
-    json="{\"version\": \"$version\",\"date\": \"$timestamp\",\"variants\": ["
-    find $BD/ -name "ImbrogliOS_aosp-*-14.0-$buildDate.img.xz" | sort | {
-        while read file; do
-            filename="$(basename $file)"
-            [[ "$filename" == *"-arm32"* ]] && arch="a64" || arch="arm64"
-            [[ "$filename" == *"-vanilla"* ]] && variant="v" || variant="g"
-            [[ "$filename" == *"-vndklite"* ]] && vndk="-vndklite" || vndk=""
-            name="treble_${arch}_b${variant}N${vndk}"
-            size=$(wc -c $file | awk '{print $1}')
-            url="https://github.com/imbroglius/imbroglios_gsi/releases/download/$version/$filename"
-            json="${json} {\"name\": \"$name\",\"size\": \"$size\",\"url\": \"$url\"},"
-        done
-        json="${json%?}]}"
-        echo "$json" | jq . > $BL/config/ota.json
-    }
-    echo
-}
-
 START=$(date +%s)
 
 initRepos
@@ -159,7 +121,6 @@ setupEnv
 buildTrebleApp
 [ ! -z "$BV" ] && buildVariant "$BV" || buildVariants
 generatePackages
-generateOta
 
 END=$(date +%s)
 ELAPSEDM=$(($(($END-$START))/60))

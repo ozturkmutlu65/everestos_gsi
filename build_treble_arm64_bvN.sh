@@ -34,7 +34,7 @@ initRepos() {
 
 syncRepos() {
     echo "--> Syncing repos"
-    repo sync -c --force-sync --no-clone-bundle --no-tags -j16 || repo sync -c --force-sync --no-clone-bundle --no-tags -j16
+    repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j16 && repo forall -c git lfs pull
     echo
 }
 

@@ -1,11 +1,11 @@
 {
-  "version": "v2024.07.18",
-  "date": "1721249998",
+  "version": "v2024.07.24",
+  "date": "1724249998",
   "variants": [
     {
-      "name": "treble_arm64_bgN",
-      "size": "1343919036",
-      "url": "https://github.com/imbroglius/imbroglios_gsi/releases/download/v2024.07.18/ImbrogliOS_aosp-arm64-ab-gapps-14.0-20240718.img.xz"
+      "name": "treble_arm64_bvN",
+      "size": "",
+      "url": ""
     }
   ]
 }

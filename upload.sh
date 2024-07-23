@@ -45,16 +45,6 @@ uploadAssets() {
     done
 }
 
-updateOta() {
-    echo "--> Updating OTA file"
-    pushd "$BL"
-    git add config/ota.json
-    git commit -m "build: Bump OTA to $TAG"
-    git push
-    popd
-    echo
-}
-
 START=$(date +%s)
 
 createRelease

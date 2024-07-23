@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-BL=$PWD/imbroglios_gsi
+BL=$PWD/everestos_gsi
 BD=$HOME/builds
 BV=$1
 
